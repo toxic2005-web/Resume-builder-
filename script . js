@@ -1,0 +1,71 @@
+// Real-time update for resume preview
+document.addEventListener("DOMContentLoaded", function () {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const locationInput = document.getElementById("location");
+  const summaryInput = document.getElementById("summary");
+
+  const nameOutput = document.getElementById("display-name");
+  const emailOutput = document.getElementById("display-email");
+  const phoneOutput = document.getElementById("display-phone");
+  const locationOutput = document.getElementById("display-location");
+  const summaryOutput = document.getElementById("display-summary");
+
+  // Update functions
+  nameInput.addEventListener("input", () => {
+    nameOutput.textContent = nameInput.value;
+  });
+
+  emailInput.addEventListener("input", () => {
+    emailOutput.textContent = emailInput.value;
+  });
+
+  phoneInput.addEventListener("input", () => {
+    phoneOutput.textContent = phoneInput.value;
+  });
+
+  locationInput.addEventListener("input", () => {
+    locationOutput.textContent = locationInput.value;
+  });
+
+  summaryInput.addEventListener("input", () => {
+    summaryOutput.textContent = summaryInput.value;
+  });
+
+  // Add education
+  document.getElementById("add-edu").addEventListener("click", function () {
+    const input = document.getElementById("edu-input");
+    const list = document.getElementById("edu-list");
+    if (input.value.trim() !== "") {
+      const li = document.createElement("li");
+      li.textContent = input.value;
+      list.appendChild(li);
+      input.value = "";
+    }
+  });
+
+  // Add experience
+  document.getElementById("add-exp").addEventListener("click", function () {
+    const input = document.getElementById("exp-input");
+    const list = document.getElementById("exp-list");
+    if (input.value.trim() !== "") {
+      const li = document.createElement("li");
+      li.textContent = input.value;
+      list.appendChild(li);
+      input.value = "";
+    }
+  });
+
+  // Clear all
+  document.getElementById("clear-btn").addEventListener("click", function () {
+    document.querySelector("form").reset();
+    nameOutput.textContent = "";
+    emailOutput.textContent = "";
+    phoneOutput.textContent = "";
+    locationOutput.textContent = "";
+    summaryOutput.textContent = "";
+    document.getElementById("edu-list").innerHTML = "";
+    document.getElementById("exp-list").innerHTML = "";
+  });
+});
