@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Fill Your Details</h2>
+      <form id="resume-form">
+        <input type="text" id="name" value="Tilesh Rakhade" required />
+        <input type="email" id="email" value="rakhadetilesh69@gmail.com" required />
+        <input type="tel" id="phone" value="9764332249" required />
+        <textarea id="summary">Passionate and skilled computer engineering student with a focus on full-stack web development and artificial intelligence. Experienced in building dynamic web apps and intelligent systems using modern technologies. Proficient in front-end, back-end, databases, and generative AI tools. Quick learner, team player, and always eager to innovate and grow.</textarea><div id="education-section">
+      <h3>Education</h3>
+      <div class="edu-entry">
+        <input type="text" value="J.D COLLEGE OF ENGINEERING AND MANAGEMENT" class="edu-input"/>
+        <input type="text" value="2023-2027 (B.Tech AI, DBATU University)" class="edu-input"/>
+      </div>
+      <button type="button" id="add-education">+ Add More</button>
+    </div>
+
+    <h3>Skills (comma separated)</h3>
+    <input type="text" id="skills" value="HTML, CSS, JavaScript, Web Development, Generative AI, DBMS, SQL, Python" />
+
+    <div id="experience-section">
+      <h3>Experience</h3>
+      <div class="exp-entry">
+        <input type="text" value="Web Development Internship" class="exp-input"/>
+        <input type="text" value="Remote Internship" class="exp-input"/>
+      </div>
+      <div class="exp-entry">
+        <input type="text" value="Book Suggestion Platform Project" class="exp-input"/>
+        <input type="text" value="Personal Project" class="exp-input"/>
+      </div>
+      <div class="exp-entry">
+        <input type="text" value="Voting System Project" class="exp-input"/>
+        <input type="text" value="College Project" class="exp-input"/>
+      </div>
+      <button type="button" id="add-experience">+ Add More</button>
+    </div>
+
+    <div class="form-buttons">
+      <button type="reset">Clear</button>
+    </div>
+  </form>
+</section>
+
+<!-- Resume Preview -->
+<section class="preview-section">
+  <h2>Live Resume Preview</h2>
+  <div id="resume-preview">
+    <h1 id="preview-name">Tilesh Rakhade</h1>
+    <p id="preview-summary">
+      Passionate and skilled computer engineering student with a focus on full-stack web development and artificial intelligence. Experienced in building dynamic web apps and intelligent systems using modern technologies. Proficient in front-end, back-end, databases, and generative AI tools. Quick learner, team player, and always eager to innovate and grow.
+    </p>
+    <p><strong>Email:</strong> <span id="preview-email">rakhadetilesh69@gmail.com</span></p>
+    <p><strong>Phone:</strong> <span id="preview-phone">9764332249</span></p>
+    <p><strong>Location:</strong> Nagpur / Sakoli</p>
+
+    <div>
+      <h3>Education</h3>
+      <ul id="preview-education">
+        <li>J.D COLLEGE OF ENGINEERING AND MANAGEMENT (2023-2027) - B.Tech AI, DBATU University</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Skills</h3>
+      <p id="preview-skills">HTML, CSS, JavaScript, Web Development, Generative AI, DBMS, SQL, Python</p>
+    </div>
+    <div>
+      <h3>Experience</h3>
+      <ul id="preview-experience">
+        <li>Web Development Internship – Remote Internship</li>
+        <li>Book Suggestion Platform Project – Personal Project</li>
+        <li>Voting System Project – College Project</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
